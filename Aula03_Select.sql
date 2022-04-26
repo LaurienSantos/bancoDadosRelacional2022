@@ -110,3 +110,19 @@ order by nome desc
 select nome, cidade
 from Cliente
 order by cidade asc, nome desc
+
+-- DISTINCT 
+SELECT DISTINCT bairro 
+FROM Cliente
+ORDER BY bairro
+
+SELECT BAIRRO, COUNT(*)
+FROM Cliente
+GROUP BY bairro
+
+--QUANTOS CLIENTES DO SEXO MASCULINO E DO SEXO FEMININO EU 
+--TENHO CADASTRADO
+SELECT cidade, SEXO, COUNT(*) AS QUANTIDADE
+FROM Cliente
+GROUP BY cidade, sexo
+ORDER BY cidade
